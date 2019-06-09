@@ -22,6 +22,11 @@ npm install --save-dev react@16.5.2 react-dom@16.5.2 react-hot-loader@4.3.11
 5.- Install Jest
 npm install --save-dev jest
 
+6.- Install Redux
+npm install --save-dev Redux
+
+7.- Install react-Redux
+npm install --save-dev react-redux
 
 How run scripts in root folder setupReactJS:
     npm run start  // start react app localhost:3000
