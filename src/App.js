@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { hot } from "react-hot-loader";
-import { List, CreditCardForm } from "./components/index";
-import "./App.css";
+import Nav from "./web/pages/nav";
+import About from "./web/pages/about/index"
+import Dashboard from "./web/pages/dashboard/index"
+import CreditCards from "./web/pages/creditCards/index"
+import DebitCards from "./web/pages/debitCards/index"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './App.css'
 
 class App extends Component {
     constructor() {
@@ -9,18 +14,18 @@ class App extends Component {
     }
 
     render() {
-        return(
-            <div className="container">
-                <div className="row">
-                    <div className="col-sm">
-                        <List />
-                    </div>
-                    <div className="col-sm">
-                        <h2>Agregar nueva tarjeta</h2>
-                        <CreditCardForm />
-                    </div>
+        return (
+            <Router>
+                <div className="App">
+                    <Nav />
+                    <Switch>
+                        <Route path="/" exact component={Dashboard} />
+                        <Route path="/credit-cards" component={CreditCards} />
+                        <Route path="/debit-cards" component={DebitCards} />
+                        <Route path="/about" component={About} />
+                    </Switch>
                 </div>
-            </div>
+            </Router>
         );
     }
 }

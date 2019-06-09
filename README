@@ -28,6 +28,9 @@ npm install --save-dev Redux
 7.- Install react-Redux
 npm install --save-dev react-redux
 
+8.- Install react-router-dom
+npm install --save-dev react-router-dom
+
 How run scripts in root folder setupReactJS:
     npm run start  // start react app localhost:3000
     npm run jest   // run test
