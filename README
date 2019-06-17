@@ -35,5 +35,6 @@ How run scripts in root folder setupReactJS:
     npm run start  // start react app localhost:3000
     npm run jest   // run test
 
-
-    
+9-. install material UI framework
+npm install --save-dev @material-ui/core
+npm install --save-dev @material-ui/icons

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class AboutPage extends Component {
+class ReportsPage extends Component {
     constructor() {
         super();
     }
@@ -10,7 +10,7 @@ class AboutPage extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-sm">
-                      <h1>About page</h1>
+                      <h1>Reports page</h1>
                     </div>
                 </div>
             </div>
@@ -18,4 +18,4 @@ class AboutPage extends Component {
     }
 }
 
-export default AboutPage;
+export default ReportsPage;

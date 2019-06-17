@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import Nav from "./web/pages/nav";
-import About from "./web/pages/about/index"
+import Reports from "./web/pages/about/index"
 import Dashboard from "./web/pages/dashboard/index"
 import CreditCards from "./web/pages/creditCards/index"
 import DebitCards from "./web/pages/debitCards/index"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import List from './components/List';
 import './App.css'
 
 class App extends Component {
@@ -22,7 +23,8 @@ class App extends Component {
                         <Route path="/" exact component={Dashboard} />
                         <Route path="/credit-cards" component={CreditCards} />
                         <Route path="/debit-cards" component={DebitCards} />
-                        <Route path="/about" component={About} />
+                        <Route path="/reports" component={Reports} />
+                        <Route path="/my-cards" component={List} />
                     </Switch>
                 </div>
             </Router>

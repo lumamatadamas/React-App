@@ -8,24 +8,12 @@ class Nav extends Component {
     }
 
     render() {
-        const navStyle = { color: 'white' };
         return (
             <nav>
-                <h3>Logo</h3>
-                <ul className="nav-links">
-                    <Link style={navStyle} to="/dashboard">
-                        <li>Dashboard</li>
-                    </Link>
-                    <Link style={navStyle} to="/credit-cards">
-                        <li>Tarjetas de credito</li>
-                    </Link>
-                    <Link style={navStyle} to="/debit-cards">
-                        <li>Tarjetas de debito</li>
-                    </Link>
-                    <Link style={navStyle} to="/about">
-                        <li>Sobre My expenses</li>
-                    </Link>
-                </ul>
+                <Link to="/">
+                    <h3>Logo</h3>
+                </Link>
+                <button className="user-icon"><span>User Name</span><i className="fa fa-user-circle-o"></i></button>
             </nav>
         );
     }
