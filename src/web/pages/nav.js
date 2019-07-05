@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import '../../App.css';
+import Icon from '@material-ui/core/Icon';
+import Button from '@material-ui/core/Button';
 
 class Nav extends Component {
     constructor() {
@@ -11,9 +13,9 @@ class Nav extends Component {
         return (
             <nav>
                 <Link to="/">
-                    <h3>Logo</h3>
+                    <h3 className="logo-text">MyExpenses</h3>
                 </Link>
-                <button className="user-icon"><span>User Name</span><i className="fa fa-user-circle-o"></i></button>
+                <button className="user-icon"><span>User Name</span><Icon>person</Icon></button>
             </nav>
         );
     }

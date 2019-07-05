@@ -14,6 +14,7 @@ class CreditCardsPage extends Component {
                         <h2>Agregar nueva tarjeta</h2>
                         <CreditCardForm />
                     </div>
+                    <div className="col-lg"></div>
                 </div>
             </div>
         );
