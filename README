@@ -38,3 +38,6 @@ How run scripts in root folder setupReactJS:
 9-. install material UI framework
 npm install --save-dev @material-ui/core
 npm install --save-dev @material-ui/icons
+
+10.- install redux-cycles
+install --save-dev redux-cycles

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { AddCreditCard } from "../reduxConfig/actions/index";
+// import { connect } from "react-redux";
+// import { AddCreditCard } from "../reduxConfig/actions/index";
 
 class CreditCardForm extends Component {
     constructor() {
@@ -60,10 +60,12 @@ class CreditCardForm extends Component {
 
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        AddCreditCard: newCreditCard => dispatch(AddCreditCard(newCreditCard))
-    };
-}
+// function mapDispatchToProps(dispatch) {
+//     return {
+//         AddCreditCard: newCreditCard => dispatch(AddCreditCard(newCreditCard))
+//     };
+// }
 
-export default connect(null, mapDispatchToProps)(CreditCardForm);
+
+export default CreditCardForm
+// export default connect(null, mapDispatchToProps)(CreditCardForm);

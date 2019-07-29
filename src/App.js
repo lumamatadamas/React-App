@@ -7,8 +7,7 @@ import { CardDetail } from "./components/index";
 import CreditCards from "./web/pages/creditCards/index"
 import DebitCards from "./web/pages/debitCards/index"
 import { BrowserRouter as Router, Switch, Route, withRouter } from "react-router-dom";
-import List from './components/List';
-import './App.css'
+import './App.css';
 
 class App extends Component {
     constructor() {
@@ -26,12 +25,14 @@ class App extends Component {
                         <Route path="/credit-cards" component={CreditCards} />
                         <Route path="/debit-cards" component={DebitCards} />
                         <Route path="/reports" component={Reports} />
-                        <Route path="/my-cards" component={List} />
+                        <Route path="/my-cards" component={CreditCards} />
                     </Switch>
                 </div>
             </Router>
         );
     }
 }
+
+
 
 export default hot(module)(App);

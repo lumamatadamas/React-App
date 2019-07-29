@@ -1,7 +1,3 @@
-import { createStore, applyMiddleware } from 'redux';
-import rootReducer from '../reducers/index';
-// import { cycleMiddleware } from '../middlewares/api';
-
 import xs from 'xstream';
 import { run } from '@cycle/run';
 import { makeHTTPDriver } from '@cycle/http';
@@ -29,15 +25,10 @@ function main(sources) {
     return sinks;
 }
 
+const log = res => { console.log(res); return res; }
+
 const cycleMiddleware = createCycleMiddleware();
 const { makeActionDriver, makeStateDriver } = cycleMiddleware;
-
-const store = createStore(
-    rootReducer,
-    applyMiddleware(cycleMiddleware)
-);
-
-const log = res => { console.log(res); return res; }
 
 run(main, {
     ACTION: makeActionDriver(),
@@ -45,4 +36,4 @@ run(main, {
     HTTP: makeHTTPDriver()
 });
 
-export default store;
+

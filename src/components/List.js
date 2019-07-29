@@ -8,9 +8,9 @@ class List extends Component {
     }
 
     render() {
-        const { creditCardsList = [], history } = this.props;
-        const creditCardsMapped = creditCardsList.length > 0 ? creditCardsList.map( cc => 
-            <div key={`card-item-cotainer-${cc.id}`} className="card-item" onClick={() => history.push(`/credit-cards/${cc.id}`)}>
+        const { creditCardList, history } = this.props;
+        const creditcreditCardListMapped = creditCardList.length > 0 ? creditCardList.map( cc => 
+            <div key={`card-item-cotainer-${cc.id}`} className="card-item" onClick={() => history.push(`/credit-creditCardList/${cc.id}`)}>
                 <li className="list-group-item" key={cc.id}>
                     <strong>nombre: </strong> {cc.creditCardName}<br/>
                     <strong>número: </strong> {cc.creditCardNumber}<br/>
@@ -19,9 +19,9 @@ class List extends Component {
         return (
             <div className="container">
                 <ul className="list-group list-group-flush">
-                    {creditCardsMapped}
+                    {creditcreditCardListMapped}
                 </ul>
-                <Link className="float-button" to="/credit-cards">
+                <Link className="float-button" to="/credit-creditCardList">
                     <i className="fa fa-plus my-float"></i>
                 </Link>
             </div>
@@ -29,10 +29,19 @@ class List extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return { creditCardsList: state.creditCardsList };
-}
+// List.propTypes = {
+//     creditCardList: Component.prototype
+// }
 
-const connectedList = connect(mapStateToProps)(withRouter(List));
+export default List;
 
-export default connectedList;
+// peopleArrayProp: PropTypes.arrayOf(
+//     PropTypes.instanceOf(Person)
+//   ),
+
+//   multipleArrayProp: PropTypes.arrayOf(
+//     PropTypes.oneOfType([
+//       PropType.number,
+//       PropType.string
+//     ])
+//   )

@@ -1,24 +1,12 @@
-import React, { Component } from "react";
-import { CreditCardForm, List } from "../../../components";
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import CreditCardsContainer from './creditCardContainer';
+import * as CreditCardActions from '../../../reduxConfig/reducers/cards/actions/index';
 
-class CreditCardsPage extends Component {
-    constructor() {
-        super();
-    }
+const mapStateToProps = state => ({
+    creditCardsList: state.creditCardsList,
+    ...state });
 
-    render() {
-        return(
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg">
-                        <h2>Agregar nueva tarjeta</h2>
-                        <CreditCardForm />
-                    </div>
-                    <div className="col-lg"></div>
-                </div>
-            </div>
-        );
-    }
-}
+const mapDispatchToProps = dispatch => bindActionCreators(CreditCardActions, dispatch);
 
-export default CreditCardsPage;
+export default connect(mapStateToProps, mapDispatchToProps)(CreditCardsContainer);
