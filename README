@@ -40,4 +40,7 @@ npm install --save-dev @material-ui/core
 npm install --save-dev @material-ui/icons
 
 10.- install redux-cycles
-install --save-dev redux-cycles
+npm install --save-dev redux-cycles
+
+11.- isntall loadash
+npm install --save lodash

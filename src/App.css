@@ -52,8 +52,8 @@ nav {
 }
 
 .card-item {
-    width: 300px;
-    height: 100px;
+    width: auto;
+    height: auto;
     text-align: justify;
     border: solid;
     border-radius: 7px;
@@ -120,4 +120,31 @@ nav {
     border:solid;
     border-radius: 10px;
     padding:10px 30px;
+}
+
+.card-form-container {
+    display: flex;
+    flex-wrap: wrap;
+    left: auto;
+    right: auto;
+}
+
+.card-form-control {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 300px;
+    min-width: 120px;
+}
+
+.card-select-option {
+    width: 200px;
+}
+
+.card-item {
+    width: 200px;
+    margin: 5px;
+}
+
+.card-title {
+    font-size: 56px;
 }

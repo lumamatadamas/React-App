@@ -12,7 +12,7 @@ class DashboardPage extends Component {
                 <div className="row">
                     <div className="col-md">
                         <button className="row nav-card" >
-                            <Link className="title-card" to="/my-cards">
+                            <Link className="title-card" to="/cards">
                                 <p>Mis Tarjetas</p>
                             </Link>
                         </button>
@@ -24,12 +24,12 @@ class DashboardPage extends Component {
                     </div>
                     <div className="col-md">
                         <button className="row nav-card">
-                            <Link className="title-card" to="/credit-cards">
+                            <Link className="title-card" to="/cards">
                                 <p>Tarjetas de Credito</p>
                             </Link>
                         </button>
                         <button className="row nav-card">
-                            <Link className="title-card" to="/debit-cards">
+                            <Link className="title-card" to="/cards">
                                 <p>Tarjetas de Debito</p>
                             </Link>
                         </button>

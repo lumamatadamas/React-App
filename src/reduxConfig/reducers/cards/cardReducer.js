@@ -1,29 +1,41 @@
 import * as CardActionTypes from './constants/action-types';
+import { Card } from '@material-ui/core';
 
 const initialState = {
     creditCardList:[],
-    currentCard: {}
+    currentCard: {},
+    cardTypes: [],
+    // extract this key to rootReducer
+    isLoading: false
 };
 
 export function cardReducer(state=initialState, action){
-    switch(action.type){
-        case CardActionTypes.ADD_CREDIT_CARD:
+    const { type, payload } = action;
+    switch(type){
+        case CardActionTypes.ADD_CARD_SUCCESS:
             return {
                 ...state,
-                creditCardList: [...state.creditCardList, action.payload]
-            }
-        case CardActionTypes.REQUEST_CARDS:
-            return {
-                ...state,
-                isLoading: action.payload
+                creditCardList: [...state.creditCardList, payload]
             }
         
-        case CardActionTypes.RECEIVE_CARDS: 
+        case CardActionTypes.FETCH_CARDS_SUCCESS: 
             return {
                 ...state,
-                creditCardList: [ ... action.payload]
+                creditCardList: [...payload]
             }    
-                
+        
+        case CardActionTypes.FIND_CARD_SUCCESS:
+            return {
+                ...state,
+                currentCard: { ...payload }
+            }
+        
+        case CardActionTypes.FETCH_CARD_TYPES_SUCCESS:
+            return {
+                ...state,
+                cardTypes: payload
+            }
+
         default: return state;
     }
 }

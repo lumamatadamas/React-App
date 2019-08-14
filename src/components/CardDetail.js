@@ -1,20 +1,17 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
-class CardDetail extends Component {
-    constructor() {
-        super();
+export default class CardDetail extends Component {
+    componentDidMount() {
+        this.props.FindCard(this.props.id);
     }
 
     render() {
-        const { creditCardsList, match: { params: { id } } } = this.props;
-        const currentCreditCard = creditCardsList.find(cc => cc.id == id);
-        const { creditCardName } = currentCreditCard;
+        const { currentCard: { name } } = this.props;
         return (
             <div className="container">
                 <div className="row card-detail-submenu">
                     <div className="col-md-3">
-                        <h3>{creditCardName}</h3>
+                        <h3>{name}</h3>
                     </div>
                     <div className="col-md-7">
                         <ul>
@@ -38,7 +35,7 @@ class CardDetail extends Component {
                         <div className="balance-summary">
                             <div className="row">
                                 <div className="col-md-2 balance-arrows" >
-                                    <i class="fa fa-angle-left "></i>
+                                    <i className="fa fa-angle-left "></i>
                                 </div>
                                 <div className="col-md-8" >
                                     <div className="row balance-quantity">Saldo del mes actual</div>
@@ -119,10 +116,3 @@ class CardDetail extends Component {
         );
     }
 }
-
-const mapStateToProps = state => {
-    return { creditCardsList: state.creditCardsList };
-}
-
-export default connect(mapStateToProps)(CardDetail);
-

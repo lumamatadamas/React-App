@@ -13,7 +13,7 @@ class Nav extends Component {
         return (
             <nav>
                 <Link to="/">
-                    <h3 className="logo-text">MyExpenses</h3>
+                    <h3 className="logo-text">App logo</h3>
                 </Link>
                 <button className="user-icon"><span>User Name</span><Icon>person</Icon></button>
             </nav>

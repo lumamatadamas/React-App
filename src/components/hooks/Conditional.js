@@ -1,0 +1,1 @@
+export default wrappedComponent => (wrappedComponent.if && wrappedComponent.children)
